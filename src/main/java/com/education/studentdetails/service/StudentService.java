@@ -23,6 +23,7 @@ public class StudentService {
     }
     public Student selectStudent(Long id) throws Exception {
        Optional<Student> student =studentRepository.findById(id);
+       System.err.println(student);
        if(student.isPresent()){
            return student.get();
        }
