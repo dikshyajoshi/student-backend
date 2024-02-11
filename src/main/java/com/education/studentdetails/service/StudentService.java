@@ -33,7 +33,7 @@ public class StudentService {
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
-        System.out.println(student);
+        System.out.println("Student"+ student);
         studentRepository.save(student);
         return "Student details saved successfully";
     }
