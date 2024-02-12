@@ -47,6 +47,7 @@ public class StudentService {
 
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
+            System.out.println("Student deleted successful whose Id id"+ sid);
             return "Student Deleted";
         }
         throw new ResourceNotFound("Student Not Found");
