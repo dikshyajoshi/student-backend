@@ -33,18 +33,11 @@ public class StudentService {
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
-        //System.out.println("Student"+ student);
         studentRepository.save(student);
         return "Student details saved successfully";
     }
 
     public String deleteStudent(Long sid) {
-//        Optional<Student> student= studentRepository.findById(sid);
-//        if(student.isPresent()){
-//            studentRepository.deleteById(sid);
-//            return "Student Deleted";
-//        }
-
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
             //System.out.println("Student deleted successful whose Id id"+ sid);
