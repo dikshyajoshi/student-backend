@@ -33,7 +33,7 @@ public class StudentService {
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
-        System.out.println("Student"+ student);
+        //System.out.println("Student"+ student);
         studentRepository.save(student);
         return "Student details saved successfully";
     }
@@ -47,7 +47,7 @@ public class StudentService {
 
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
-            System.out.println("Student deleted successful whose Id id"+ sid);
+            //System.out.println("Student deleted successful whose Id id"+ sid);
             return "Student Deleted";
         }
         throw new ResourceNotFound("Student Not Found");
