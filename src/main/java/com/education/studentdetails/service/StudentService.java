@@ -27,9 +27,7 @@ public class StudentService {
        if(student.isPresent()){
            return student.get();
        }
-//        if(studentRepository.existsById(id)){
-//            return studentRepository.findById(id);   //Does not work as it returns Optional
-//        }
+
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
@@ -40,7 +38,7 @@ public class StudentService {
     public String deleteStudent(Long sid) {
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
-            //System.out.println("Student deleted successful whose Id id"+ sid);
+
             return "Student Deleted";
         }
         throw new ResourceNotFound("Student Not Found");
