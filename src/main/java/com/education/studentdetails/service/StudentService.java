@@ -31,17 +31,19 @@ public class StudentService {
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
-        System.out.println("Done.....");
+        System.out.println("This is Student.....");
         studentRepository.save(student);
         return "Student details saved successfully";
     }
 
     public String deleteStudent(Long sid) {
+        System.out.println("This is deleting Student....");
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
 
             return "Student Deleted";
         }
+        System.out.println("Deleted Successfully");
         throw new ResourceNotFound("Student Not Found");
 
     }
