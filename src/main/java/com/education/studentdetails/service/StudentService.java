@@ -31,6 +31,7 @@ public class StudentService {
        throw new Exception("Student Not Found");
     }
     public String saveDetails(Student student){
+        System.out.println("Done.....");
         studentRepository.save(student);
         return "Student details saved successfully";
     }
