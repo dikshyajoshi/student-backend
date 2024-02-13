@@ -38,6 +38,7 @@ public class StudentService {
 
     public String deleteStudent(Long sid) {
         System.out.println("This is deleting Student....");
+        System.out.println("LETS DELETE STUDENT....");
         if(studentRepository.existsById(sid)){
             studentRepository.deleteById(sid);
 
